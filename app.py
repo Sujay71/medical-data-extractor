@@ -5,7 +5,7 @@ import time
 import json
 import os
 import platform
-URL = "http://127.0.0.1:8000/{}"
+URL = "https://medical-data-extractor-backend.onrender.com/{}"
 
 
 # Use Windows poppler only if it actually exists on this machine
