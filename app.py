@@ -5,7 +5,6 @@ import time
 import json
 import os
 import platform
-POPPLER_PATH = r"C:\poppler-24.08.0\Library\bin"
 URL = "http://127.0.0.1:8000/{}"
 
 
