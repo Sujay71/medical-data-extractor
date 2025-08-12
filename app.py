@@ -3,9 +3,19 @@ import requests
 from pdf2image import convert_from_bytes
 import time
 import json
-
+import os
+import platform
 POPPLER_PATH = r"C:\poppler-24.08.0\Library\bin"
 URL = "http://127.0.0.1:8000/{}"
+
+
+# Use Windows poppler only if it actually exists on this machine
+if platform.system() == "Windows":
+    win_path = r"C:\poppler-24.08.0\Library\bin"
+    POPPLER_PATH = win_path if os.path.exists(win_path) else None
+else:
+    POPPLER_PATH = None
+
 
 st.title("Medical Data Extractor 👩‍⚕️")
 
